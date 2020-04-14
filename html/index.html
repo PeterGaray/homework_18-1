@@ -37,6 +37,9 @@
 
 <!-- this hero image doesn't shrink along with all the other elements-->
 <!-- There is also some space on the right of the screen that seems to be an unused margin or something. Not sure how to get rid of it-->
+<!-- When you notice small bugs like this, go into inspector (in google chrome, right click, inspect element) and when you hover over certain classes (divs) they will be highlighted. this way you can check what exactly is causing the issues.  
+
+The small space on the right was because you added a new row (which is great), but make sure the row is inside a div named container (or contaienr-fluid) so it is responsive correctly. I added the container-fluid div to span your row div.-->
 <section class="hero">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -49,30 +52,32 @@
 <!-- I want to add hover/animations to these cards-->
 <section class="works">
     <div class=myProjects><h2>My Projects</h2></div>
-    
-<div class="row">
-    <div class="cardContainer col-lg-4 col-md-4 col-sm-12"><a href="https://docs.google.com/presentation/d/17SZxgqcc9J8GyPwQ5azPS81o3lEp20_dcFI2wQPvBOU/edit?usp=sharing">
-        <div class="card"><img src="../images/routinely7.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-            <p class="card-text">Routinely, an concept for a skin care app to be used by both patients and dermatologists to keep track of, manage, and communicate about skin care regimens.</p>
-            </a></div>
-        </div>
-    </div>
+<div class="container-fluid">   
+    <div class="row">
+        <div class=" col-lg-4 col-md-4 col-sm-12"><a href="https://docs.google.com/presentation/d/17SZxgqcc9J8GyPwQ5azPS81o3lEp20_dcFI2wQPvBOU/edit?usp=sharing">
+            <div class="card"><img src="../images/routinely7.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <!-- to add a hover for example to this class -> check the css file
+                you add the hover effects by adding ':hover' right after the .className
+                then give it properties you want -->
+                <p class="card-text">Routinely, an concept for a skin care app to be used by both patients and dermatologists to keep track of, manage, and communicate about skin care regimens.</p>
+                </div></div></a><!-- Make sure you end the <div> at the correct plcement. if you open a new div tag within <a>, the close the <div> before you close the <a> tag. -->
+            </div>
+        
 
-    <div class="cardContainer col-lg-4 col-md-4 col-sm-12"><a href="https://docs.google.com/presentation/d/18J_3hbnY8bd0M-CjZgJ-TEKa2t1PIHM5YtlbnJv_Wio/edit?usp=sharing">
-        <div class="card"><img src="../images/cde4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-            <p class="card-text">A redesign of the California Deparment of Education's current website. Focus was in modernizing the site while also improving usability accross all aspects.</p>
-            </a></div>
-      </div>
-    </div>
+        <div class="col-lg-4 col-md-4 col-sm-12"><a href="https://docs.google.com/presentation/d/18J_3hbnY8bd0M-CjZgJ-TEKa2t1PIHM5YtlbnJv_Wio/edit?usp=sharing">
+            <div class="card"><img src="../images/cde4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">A redesign of the California Deparment of Education's current website. Focus was in modernizing the site while also improving usability accross all aspects.</p>
+                </div></div></a>
+          </div>
 
-    <div class="cardContainer col-lg-4 col-md-4 col-sm-12"><a href="https://docs.google.com/presentation/d/18X08UjzNHymV24dKPEIktdw9Ht5c7wBonexrPpAxAp0/edit?usp=sharing">
-        <div class="card"><img src="../images/HaH3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-            <p class="card-text">Harmony at Home is a non-profit focused in helping children and families going through tough social issues. This redesign includes desktop and mobile versions.</p>
-            </a></div>
-        </div>
+        <div class=" col-lg-4 col-md-4 col-sm-12"><a href="https://docs.google.com/presentation/d/18X08UjzNHymV24dKPEIktdw9Ht5c7wBonexrPpAxAp0/edit?usp=sharing">
+            <div class="card"><img src="../images/HaH3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">Harmony at Home is a non-profit focused in helping children and families going through tough social issues. This redesign includes desktop and mobile versions.</p>
+                </div></div></a>
+            </div>
     </div>
 </div>
 </section>
